@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" thread-count="2" name="EcommerceApplicationE2E">
+    <listeners>
+        <listener class-name ="ecommerce.TestComponents.Listener">
+        </listener>
+    </listeners>
+
+    <test name="SubmitAndVerify">
+        <classes>
+            <class name="ecommerce.Test.E2EFlowECommerceTest">
+                <methods>
+                    <include name="submitOrderTest"/>
+                    <include name="verifyOrderHistory"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name ="ErrorValidation">
+            <classes>
+            <class name="ecommerce.Test.ErrorValidationECommerceTest">
+                <methods>
+                    <include name="verifyLoginErrorMessage"/>
+                    <include name="verifyIncorrectProductInCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

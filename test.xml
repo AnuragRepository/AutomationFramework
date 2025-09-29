@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EcommerceApplicationE2E">
+    <listeners>
+        <listener class-name ="ecommerce.TestComponents.Listener">
+        </listener>
+    </listeners>
+
+    <test name ="ErrorValidation">
+            <classes>
+            <class name="ecommerce.Test.ErrorValidationECommerceTest">
+                <methods>
+                    <include name="verifyLoginErrorMessage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

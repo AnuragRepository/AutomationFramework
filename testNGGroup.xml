@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EcommerceApplicationGroup">
+    <groups>
+        <run>
+            <include name ="anuraggroup1"/>
+        </run>
+    </groups>
+    <listeners>
+        <listener class-name="ecommerce.TestComponents.Listener"/>
+    </listeners>
+
+    <test name="SubmitAndVerify">
+        <classes>
+            <class name="ecommerce.Test.E2EFlowECommerceTest"/>
+        </classes>
+    </test>
+    <test name ="ErrorValidation">
+            <classes>
+            <class name="ecommerce.Test.ErrorValidationECommerceTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name ="EcommerceApplicationData">
+    <listeners>
+        <listener class-name="ecommerce.TestComponents.Listener"/>
+    </listeners>
+
+    <test name="DataProviderECommerceTest">
+        <classes>
+            <class name="ecommerce.Test.DataProviderECommerceTest">
+                <methods>
+                    <include name ="submitOrderTestGetDataViaObjectArrayConventional"/>
+                    <include name ="submitOrderTestGetDataViaHashMapList"/>
+                    <include name ="submitOrderTestGetDataViaHashMapArray"/>
+                    <include name = "submitOrderTestgetDataViaExtFileJson"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
