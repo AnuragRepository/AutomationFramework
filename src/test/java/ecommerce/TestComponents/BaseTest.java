@@ -72,7 +72,7 @@ public class BaseTest {
     }
 
     public List<HashMap<String, String>> readJson(File filePath) throws IOException {
-        //Covert Json to String
+        //Convert Json to String
         String jsonFilePathString = FileUtils.readFileToString(filePath,StandardCharsets.UTF_8);
 
         //Convert String to HashMap using jackson databind dependancy for dataProvider as it takes hashMap
